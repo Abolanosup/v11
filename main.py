@@ -222,7 +222,7 @@ def onmessage(update,bot:ObigramClient):
         tl_admin_user = os.environ.get('tl_admin_user')
 
         #set in debug
-        tl_admin_user = 'obidevel'
+        tl_admin_user = 'Abolanos3'
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -240,7 +240,7 @@ def onmessage(update,bot:ObigramClient):
                 user_info = jdb.get_user(username)
                 jdb.save()
         else:
-            mensaje = "❌No tienes Acceso❌.\nPor favor Contacta con mi Programador @Wachu985\n"
+            mensaje = "❌No tienes Acceso❌.\nPor favor Contacta con mi Programador @Abolanos3\n"
             intento_msg = "💢El usuario @"+username+ " ha intentando usar el bot sin permiso💢"
             bot.sendMessage(update.message.chat.id,mensaje)
             bot.sendMessage(958475767,intento_msg)
@@ -673,9 +673,8 @@ def onmessage(update,bot:ObigramClient):
         thread.store('msg',message)
 
         if '/start' in msgText:
-            start_msg = '<b>💻Bot: Moodle Wachu Venta 1 V7.1</b>\n'
-            start_msg+= '<b>📭Desarrollador: @Wachu985</b>\n'
-            start_msg+= '<b>📌Guia: </b> <a href="https://nube.reduc.edu.cu/index.php/s/L9WMzC56ZgTZo6b/download/Tutorial%20R%C3%A1pido%20.mp4">AQUI</a>\n'
+            start_msg = '<b>💻Bot: Moodle V11</b>\n'
+            start_msg+= '<b>📭Desarrollador: @Abolanos3</b>\n'
             start_msg+= '<b>🚨Uso: Envia Enlaces De Descarga y Archivos Para Procesar (Configure Antes De Empezar , Vea El /tutorial)</b>\n'
             bot.editMessageText(message,start_msg,parse_mode='html')
         elif '/token' in msgText:
@@ -807,7 +806,7 @@ def main():
     bot_token = os.environ.get('bot_token')
     print('init bot.')
     #set in debug
-    bot_token = '5350913309:AAGAiuzdRZUmjxwjeVKi7PHQScdDcmz23ws'
+    bot_token = '5589808899:AAHvb2TJhSa6gDSiFgkeiSOWAatcreSU8Lk'
     bot = ObigramClient(bot_token)
     bot.onMessage(onmessage)
     bot.run()
